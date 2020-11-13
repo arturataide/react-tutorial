@@ -2,6 +2,7 @@ import React, {ReactElement} from 'react';
 import {FontAwesomeIcon} from '@fortawesome/react-fontawesome';
 import {faBars} from '@fortawesome/free-solid-svg-icons';
 import {Transition} from 'react-spring/renderprops';
+import MenuItems from './MenuItems';
 
 type IShowMenu = {
     showMenu: boolean
@@ -11,6 +12,11 @@ class Navigation extends React.Component<any, IShowMenu> {
 
     state: IShowMenu = {
         showMenu: false
+    }
+
+    constructor(props: any) {
+        super(props);
+        this.setShowMenu = this.setShowMenu.bind(this);
     }
 
     private setShowMenu(showMenu: boolean): void {
@@ -30,12 +36,10 @@ class Navigation extends React.Component<any, IShowMenu> {
                     <div
                         style={props}
                         className="fixed bg-white top-0 left-0 w-4/5 h-full z-50 shadow p-3">
-                        <span className="font-bold">
+                        <div className="font-bold py-3">
                             The Menu
-                        </span>
-                        <ul>
-                            <li>Homepage</li>
-                        </ul>
+                        </div>
+                        <MenuItems setShowMenu={this.setShowMenu}/>
                     </div>)}
         </Transition>;
     }

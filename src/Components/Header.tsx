@@ -1,5 +1,5 @@
 import React, {ReactElement} from 'react';
-import Navigation from './Navigation';
+import Navigation from './Menu/Navigation';
 
 class Header extends React.Component<any, any> {
     render(): ReactElement {
