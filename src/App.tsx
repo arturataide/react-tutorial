@@ -4,6 +4,7 @@ import Footer from './Components/Footer';
 import {BrowserRouter as Router, Route, Switch} from 'react-router-dom';
 import Home from './Views/Home';
 import About from './Views/About';
+import Characters from './Views/Characters';
 
 const App: React.FC = (): React.ReactElement => {
     return (
@@ -15,6 +16,10 @@ const App: React.FC = (): React.ReactElement => {
                         <Route exact path="/">
                             <Home/>
                         </Route>
+                        <Route exact path="/characters">
+                            <Characters/>
+                        </Route>
+
                         <Route path="/about">
                             <About/>
                         </Route>

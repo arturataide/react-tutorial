@@ -13,6 +13,9 @@ class MenuItems extends React.Component<IMenuItemsProps, { any }> {
                 <Link to="/" className="text-blue-500 py-3 border-t border-b block">Home</Link>
             </li>
             <li onClick={() => this.props.setShowMenu(false)}>
+                <Link to="/characters" className="text-blue-500 py-3 border-b block">Characters</Link>
+            </li>
+            <li onClick={() => this.props.setShowMenu(false)}>
                 <Link to="/about" className="text-blue-500 py-3 border-b block">About</Link>
             </li>
         </ul>);
