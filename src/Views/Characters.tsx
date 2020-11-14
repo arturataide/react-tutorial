@@ -41,7 +41,7 @@ class Characters extends React.Component<any, ICharactersState> {
         return (
             <div>
                 <h1 className="font-bold text-2xl mb-3">Characters</h1>
-                {this.charactersList}
+                <div className="h-full w-full"> {this.charactersList}</div>
             </div>
         )
     }
