@@ -2,6 +2,7 @@ import React, {ReactElement} from 'react';
 import {BaseHttpService, IBaseRequestPayload} from '../Services/BaseHttp.service';
 import {CharacterEntity} from '../Entities/Character.entity';
 import CharacterItem from './CharacterItem';
+import Loader from '../Components/Loader/Loader';
 
 type ICharactersState = {
     characters: Array<CharacterEntity>
@@ -11,11 +12,6 @@ class Characters extends React.Component<any, ICharactersState> {
 
     private readonly API_URL = 'character';
     private baseHttpService: BaseHttpService = new BaseHttpService();
-
-    constructor(props) {
-        super(props);
-        this.setCharacters([]);
-    }
 
     private setCharacters(characters: Array<CharacterEntity>) {
         this.setState({
@@ -33,7 +29,7 @@ class Characters extends React.Component<any, ICharactersState> {
     get charactersList(): JSX.Element | Array<JSX.Element> {
         return this.state ? this.state.characters.map((character: CharacterEntity) => <CharacterItem
             key={character.id}
-            character={character}/>) : <p>No Characters</p>;
+            character={character}/>) : <Loader/>;
 
     }
 
@@ -41,7 +37,7 @@ class Characters extends React.Component<any, ICharactersState> {
         return (
             <div>
                 <h1 className="font-bold text-2xl mb-3">Characters</h1>
-                <div className="h-full w-full"> {this.charactersList}</div>
+                <div className="h-full w-full flex flex-wrap justify-center">{this.charactersList}</div>
             </div>
         )
     }

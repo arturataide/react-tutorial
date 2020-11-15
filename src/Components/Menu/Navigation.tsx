@@ -64,7 +64,7 @@ class Navigation extends React.Component<any, IShowMenu> {
     render(): ReactElement {
         return (
             <nav>
-                <span className="text-xl">
+                <span className="text-xl cursor-pointer">
                     <FontAwesomeIcon
                         icon={faBars}
                         onClick={() => this.setShowMenu(!this.state.showMenu)}/>

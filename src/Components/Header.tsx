@@ -1,17 +1,15 @@
-import React, {ReactElement} from 'react';
+import React from 'react';
 import Navigation from './Menu/Navigation';
 
-class Header extends React.Component<any, any> {
-    render(): ReactElement {
-        return (
-            <header className="border-b p-3 flex justify-between items-center">
+const Header: React.FC = (): React.ReactElement => {
+    return (
+        <header className="border-b p-3 flex justify-between items-center">
                 <span className="font-bold">
-                    App Name
+                    Rick And Morty React Wiki
                 </span>
-                <Navigation/>
-            </header>
-        )
-    }
+            <Navigation/>
+        </header>
+    )
 }
 
 export default Header;
