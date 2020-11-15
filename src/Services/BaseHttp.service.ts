@@ -43,6 +43,6 @@ export class BaseHttpService {
             ? `${this.URL}/${endpoint}${_id}?${QueryParamsUtils.fetchQueryParams<TParams>(
                 queryParams,
             )}`
-            : `${this.URL}/${endpoint}`;
+            : `${this.URL}/${endpoint}${_id}`;
     }
 }

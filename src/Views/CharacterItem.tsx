@@ -15,11 +15,9 @@ const CharacterItem: React.FC<ICharacterProps> = ({character}: ICharacterProps):
                          src={character.image}
                          alt="">
                     </img>
-                    <span className="px-3 text-gray-800">{character.name}
-                        <span className="text-sm text-gray-500">{character.species}
-                        </span>
-                    </span>
+                    <span className="px-3 text-gray-800">{character.name}</span>
                 </div>
+                <p className="text-sm text-gray-500">{character.species} - {character.origin.name}</p>
             </Link>
         </div>
     )

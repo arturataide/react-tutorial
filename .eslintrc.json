@@ -24,7 +24,6 @@
     "quotes": [
       "error",
       "single"
-    ],
-    "max-lines": ["error", 120]
+    ]
   }
 }
