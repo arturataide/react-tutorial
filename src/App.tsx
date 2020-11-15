@@ -9,7 +9,7 @@ import Character from './Views/Character';
 
 const App: React.FC = (): React.ReactElement => {
     return (
-        <div className="relative pb-10 min-h-screen">
+        <div className="relative pb-10 min-h-screen bg-teal-300">
             <Router>
                 <Header/>
                 <div className="p-3">

@@ -35,10 +35,10 @@ class Characters extends React.Component<any, ICharactersState> {
 
     render(): ReactElement {
         return (
-            <div>
-                <h1 className="font-bold text-2xl mb-3">Characters</h1>
+            <React.Fragment>
+                <h1 className="font-bold text-2xl mb-3 text-teal-800">Characters</h1>
                 <div className="h-full w-full flex flex-wrap justify-center">{this.charactersList}</div>
-            </div>
+            </React.Fragment>
         )
     }
 }

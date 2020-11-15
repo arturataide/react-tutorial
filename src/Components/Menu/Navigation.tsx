@@ -35,9 +35,9 @@ class Navigation extends React.Component<any, IShowMenu> {
                 show && ((props) =>
                     <div
                         style={props}
-                        className="fixed bg-white top-0 left-0 w-4/5 h-full z-50 shadow p-3">
-                        <div className="font-bold py-3">
-                            The Menu
+                        className="fixed bg-white top-0 left-0 w-1/5 h-full z-50 shadow p-4">
+                        <div className="font-bold py-4 text-teal-800">
+                            Menu
                         </div>
                         <MenuItems setShowMenu={this.setShowMenu}/>
                     </div>)}

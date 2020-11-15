@@ -60,7 +60,7 @@ class Character extends React.Component<ICharacterProps, ICharacterState> {
 
     get linkBack(): JSX.Element {
         return (
-            <Link to="/characters" className="mb-4">
+            <Link to="/characters" className="mb-4 text-teal-800">
                 <FontAwesomeIcon icon={faChevronLeft}/>
                 &nbsp;&nbsp;Back
             </Link>

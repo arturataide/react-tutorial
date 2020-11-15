@@ -8,7 +8,7 @@ type ICharacterProps = {
 const CharacterItem: React.FC<ICharacterProps> = ({character}: ICharacterProps): React.ReactElement => {
 
     return (
-        <div className="m-4 cursor-pointer border-1 shadow p-4 w-2/12">
+        <div className="m-4 cursor-pointer border-1 shadow p-4 w-2/12 bg-white">
             <Link to={`/characters/${character.id}`}>
                 <div className="flex overflow-hidden items-center">
                     <img className="inline-block h-10 w-10 rounded-full text-white shadow-solid"
